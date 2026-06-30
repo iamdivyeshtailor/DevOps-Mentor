@@ -1,0 +1,2 @@
+- [ModuleDetail type mismatch](module-detail-type.md) — `ModuleDetail` API type has no `totalChallenges`/`completedChallenges`; derive from `module.challenges.length` and filter.
+- [Seed command](seed-command.md) — idempotent seed: `pnpm --filter @workspace/scripts run seed`; truncates with CASCADE then reinserts.

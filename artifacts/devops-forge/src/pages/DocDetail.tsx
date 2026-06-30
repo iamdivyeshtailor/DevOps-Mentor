@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, BookOpen } from "lucide-react";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { Badge } from "@/components/ui/badge";
 
 export default function DocDetail() {
@@ -74,9 +75,7 @@ export default function DocDetail() {
         </p>
         
         <div className="bg-card border rounded-xl p-6 shadow-sm">
-          <div className="whitespace-pre-wrap font-mono text-sm leading-relaxed text-muted-foreground">
-            {topic.content}
-          </div>
+          <MarkdownRenderer content={topic.content} />
         </div>
       </div>
 

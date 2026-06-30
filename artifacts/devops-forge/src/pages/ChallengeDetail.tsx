@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 
 export default function ChallengeDetail() {
   const { id } = useParams<{ id: string }>();
@@ -110,17 +111,13 @@ export default function ChallengeDetail() {
 
       <div className="grid md:grid-cols-3 gap-8">
         <div className="md:col-span-2 space-y-8">
-          <div className="prose prose-invert prose-pre:bg-muted/50 prose-pre:border max-w-none">
-            {/* Displaying simple content for now since we don't have a real markdown parser handy, 
-                just formatting it nicely */}
+          <div className="prose prose-invert max-w-none">
             <div className="bg-card border rounded-xl p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-4 text-primary font-medium border-b pb-4">
                 <Terminal className="h-5 w-5" />
                 <span>Challenge Brief</span>
               </div>
-              <div className="whitespace-pre-wrap font-mono text-sm text-muted-foreground">
-                {challenge.content}
-              </div>
+              <MarkdownRenderer content={challenge.content} />
             </div>
           </div>
 

@@ -26,7 +26,7 @@ The roadmap is organised into discrete sprints. Each sprint has a clear objectiv
 | Sprint | Title | Status | Complexity | Key dependency |
 |--------|-------|--------|------------|----------------|
 | Sprint 0 | Foundation | Complete | — | None |
-| Sprint 1 | Content Foundation | Not started | Medium | Sprint 0 complete |
+| Sprint 1 | Content Foundation | Complete | Medium | Sprint 0 complete |
 | Sprint 2 | Progression System | Not started | Medium | Sprint 1 complete |
 | Sprint 3 | Authentication and Multi-user | Not started | High | Sprint 2 complete |
 | Sprint 4 | AI Mentor | Not started | High | Sprint 3 complete |
@@ -72,7 +72,7 @@ Prove the architecture works end to end. Ship a live, navigable platform with en
 
 ## Sprint 1 — Content Foundation
 
-**Status:** Not started  
+**Status:** Complete (2026-06-30)  
 **Estimated effort:** 3–4 weeks  
 **Complexity:** Medium (writing-heavy, moderate engineering)
 

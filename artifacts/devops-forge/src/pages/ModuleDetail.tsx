@@ -42,8 +42,10 @@ export default function ModuleDetail() {
     );
   }
 
-  const progress = module.totalChallenges > 0 
-    ? (module.completedChallenges / module.totalChallenges) * 100 
+  const totalChallenges = module.challenges.length;
+  const completedChallenges = module.challenges.filter(c => c.isCompleted).length;
+  const progress = totalChallenges > 0
+    ? (completedChallenges / totalChallenges) * 100
     : 0;
 
   return (
@@ -86,7 +88,7 @@ export default function ModuleDetail() {
           </div>
           <Progress value={progress} className="h-2 mb-4" />
           <div className="flex items-center justify-between text-sm text-muted-foreground">
-            <span>{module.completedChallenges} of {module.totalChallenges} challenges completed</span>
+            <span>{completedChallenges} of {totalChallenges} challenges completed</span>
           </div>
         </div>
       </div>
